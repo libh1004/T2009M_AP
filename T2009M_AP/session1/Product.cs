@@ -48,31 +48,28 @@ namespace T2009M_AP.session1
             }
         }
 
-        public void AddImage()
+        public void AddImage(string imageNew2, int index)
         {
             if (image < 10)
             {
-                Console.WriteLine("Nhap anh can them: ");
-                string numToAdd = Console.ReadLine();
-                gallery.Add(numToAdd);
+                gallery.Add(imageNew2);
                 Console.WriteLine("Them anh thanh cong");
             }
             else
             {
-                Console.WriteLine("Danh sach truoc khi xoa:  ");
-                gallery = new List<string>() {"anh1", "anh2", "anh3"};
+                Console.WriteLine("Danh sach anh truoc khi xoa: ");
+                gallery = new List<string>()
+                    {"anh1", "anh2", "anh3"};
                 foreach (var imageOfGallery in gallery)
                 {
-                    Console.WriteLine($"{imageOfGallery} ");
+                    Console.WriteLine($"{imageOfGallery}");
                 }
-                Console.WriteLine("Nhap vi tri anh can xoa: ");
-                int posToRemove2 = Convert.ToInt32(Console.ReadLine());
-                gallery.RemoveAt(posToRemove2);
+                gallery.RemoveAt(index);
                 Console.WriteLine("Xoa anh thanh cong");
                 
                 Console.WriteLine("Them anh moi: ");
-                string imageNew = Console.ReadLine();
-                gallery.Add(imageNew);
+                imageNew2 = Console.ReadLine();
+                gallery.Add(imageNew2);
                 Console.WriteLine("Them anh thanh cong");
             }
         }
