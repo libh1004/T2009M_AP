@@ -36,16 +36,10 @@ namespace T2009M_AP.session1
             Console.WriteLine("Do giam dan cua san pham: "+desc);
         }
 
-        public void CheckPro()
+        public bool CheckPro(int qty)
         {
-            if (qty > 0)
-            {
-                Console.WriteLine("Con hang");
-            }
-            else
-            {
-                Console.WriteLine("Het hang");
-            }
+            if (qty > 0) return true;
+            return false;
         }
 
         public void AddImage(string imageNew2, int index)
