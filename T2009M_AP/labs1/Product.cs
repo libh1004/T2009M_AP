@@ -16,6 +16,47 @@ namespace T2009M_AP.session1
         {
         }
 
+        public int Id
+        {
+            get => id;
+            set => id = value;
+        }
+
+        public string Name
+        {
+            get => name;
+            set => name = value;
+        }
+
+        public decimal Price
+        {
+            get => price;
+        }
+
+        public int Qty
+        {
+            get => qty;
+            set => qty = value;
+        }
+
+        public int Image
+        {
+            get => image;
+            set => image = value;
+        }
+
+        public int Desc
+        {
+            get => desc;
+            set => desc = value;
+        }
+
+        public List<string> Gallery
+        {
+            get => gallery;
+            set => gallery = value;
+        }
+
         public Product(int id, string name, decimal price, int qty, int image, int desc)
         {
             this.id = id;
@@ -36,7 +77,7 @@ namespace T2009M_AP.session1
             Console.WriteLine("Do giam dan cua san pham: "+desc);
         }
 
-        public bool CheckPro(int qty)
+        public bool CheckPro()
         {
             if (qty > 0) return true;
             return false;
