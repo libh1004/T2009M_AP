@@ -8,7 +8,7 @@ namespace T2009M_AP.session1
         public string name;
         public decimal price;
         public int qty;
-        public int image;
+        public string image;
         public int desc;
         public List<string> gallery = new List<string>();
 
@@ -39,7 +39,7 @@ namespace T2009M_AP.session1
             set => qty = value;
         }
 
-        public int Image
+        public string Image
         {
             get => image;
             set => image = value;
@@ -57,7 +57,7 @@ namespace T2009M_AP.session1
             set => gallery = value;
         }
 
-        public Product(int id, string name, decimal price, int qty, int image, int desc)
+        public Product(int id, string name, decimal price, int qty, string image, int desc)
         {
             this.id = id;
             this.name = name;
@@ -85,7 +85,9 @@ namespace T2009M_AP.session1
 
         public void AddImage(string imageNew2, int index)
         {
-            if (image < 10)
+            int igAfterConvert;
+            int.TryParse(image, out igAfterConvert);
+            if (igAfterConvert < 10)
             {
                 gallery.Add(imageNew2);
                 Console.WriteLine("Them anh thanh cong");
