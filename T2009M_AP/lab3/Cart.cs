@@ -1,8 +1,24 @@
 ﻿using System;
 using T2009M_AP.session1;
 using System.Collections.Generic;
+using System.Reflection.Emit;
+using Microsoft.SqlServer.Server;
+
 namespace T2009M_AP.lab3
 {
+    public delegate void ShowNoti(string message);
+    public class Notification
+    {
+        public event ShowNoti ShowEvent;
+
+        public void SetMessage(string message)
+        {
+            if (ShowEvent != null)
+            {
+                ShowEvent(message);
+            }
+        }
+    }
     public class Cart
     {
         private int id;
@@ -11,6 +27,14 @@ namespace T2009M_AP.lab3
         public List<Product> productList = new List<Product>();
         private string city;
         private string country;
+        
+        private Notification notification;
+
+        public Cart()
+        {
+            notification = new Notification();
+            notification.ShowEvent += PrintMessage;
+        }
 
         public int Id
         {
@@ -48,30 +72,28 @@ namespace T2009M_AP.lab3
             set => country = value;
         }
 
-        public Product this[int index]
-        {
-            get => productList[index];
-            set => productList[index] = value; 
-        }
-     
-        public void AddProduct(Product product)
+       public void AddProduct(Product product)
         {
             if (product.CheckPro())
             {
                 productList.Add(product);
                 product.Qty --;
                 GrandTotal += product.Price;
-                Console.WriteLine("Them thanh cong");
+                notification.SetMessage("Them san pham thanh cong, gio hang con lai: "+product.Qty);  
             }
             else
             {
-                Console.WriteLine("Them that bai");
+                notification.SetMessage("Them san pham that bai");
             }
+        }
+
+       private void PrintMessage(string message)
+        {
+            Console.WriteLine("Gio hang: " + message);
         }
 
         public void RemoveProduct(Product product, int index)
         {
-            
             productList.RemoveAt(index);
             product.Qty++;
             GrandTotal -= product.Price;
@@ -95,4 +117,6 @@ namespace T2009M_AP.lab3
         }
        
     }
+
+  
 }
