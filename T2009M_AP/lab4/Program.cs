@@ -4,7 +4,7 @@
     public class Program
     {
         public static ShowResult sr = new ShowResult(ExDelegate.ShowInfo);
-        public static void Main(string[] args)
+      /*  public static void Main(string[] args)
         {
             ExDelegate ed = new ExDelegate();
             sr += new ExDelegate().AddNumber;
@@ -12,6 +12,6 @@
             sr += new ExDelegate().MulNumber;
             sr += new ExDelegate().DivNumber;
             sr(2, 4);
-        }
+        }*/
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace T2009M_AP.assignment_6.bai1
-{
+{/*
     public class Program
     {
         public static void Main(string[] args)
@@ -21,5 +21,5 @@ namespace T2009M_AP.assignment_6.bai1
             s.Materials();
             
         }
-    }
+    }*/
 }

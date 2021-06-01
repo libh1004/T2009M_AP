@@ -2,8 +2,9 @@
 
 namespace T2009M_AP.session1
 {
-    public class Program
+   /* public class Program
     {
+        
         public static void Main(string[] args)
         {
             Product p1 = new Product();
@@ -17,5 +18,5 @@ namespace T2009M_AP.session1
             d.CheckRealFake();
         }
        
-    }
+    }*/
 }

@@ -7,7 +7,7 @@ namespace T2009M_AP.lab3
 
     public class Program
     {
-      
+      /*
         public static void Main(string[] args)
         {
             Product p1 = new Product(1,"san pham 1",2000,4,"anh3",5);
@@ -28,7 +28,7 @@ namespace T2009M_AP.lab3
             c.AddProduct(p1);
             
 
-        }
+        }*/
         
     }
 }

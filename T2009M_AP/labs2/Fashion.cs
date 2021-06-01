@@ -15,7 +15,7 @@ namespace T2009M_AP.session1
 
         public bool CheckColorSize()
         {
-           if (CheckPro(10))
+           if (CheckPro())
            {
                 if (color == "green" && size == "M")
                 {

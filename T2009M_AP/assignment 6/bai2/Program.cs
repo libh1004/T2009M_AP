@@ -2,6 +2,7 @@
 
 namespace T2009M_AP.assignment_6
 {
+    /*
     public class Program
     {
         
@@ -24,5 +25,5 @@ namespace T2009M_AP.assignment_6
             e.Ears();
             
         }
-    }
+    }*/
 }

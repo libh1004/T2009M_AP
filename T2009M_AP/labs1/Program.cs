@@ -2,6 +2,7 @@
 
 namespace T2009M_AP.session1
 {
+    /*
      public class Program
     {
         
@@ -23,11 +24,11 @@ namespace T2009M_AP.session1
                 Console.WriteLine($"{image}");
             }
             
-        /*    Fashion f = new Fashion("red","M");
+           Fashion f = new Fashion("red","M");
             Console.WriteLine( f.CheckColorSize());
 
             Diamon d = new Diamon(4);
-            d.CheckRealFake();*/
+            d.CheckRealFake();
         }
-    }
+    } */
 }
