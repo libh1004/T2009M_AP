@@ -36,9 +36,7 @@ namespace T2009M_AP.lab_5
                     {
                         Thread.Sleep(100);
                     }
-                    catch (Exception e)
-                    {
-                    }
+                    catch (Exception e) {}
                 }
                 
                 if (sec < 0) {

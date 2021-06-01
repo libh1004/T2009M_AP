@@ -4,6 +4,7 @@ using System.Threading;
 namespace T2009M_AP.lab_5
 {
     
+    
     public class Program
     {
         public static void Main(string[] args)
