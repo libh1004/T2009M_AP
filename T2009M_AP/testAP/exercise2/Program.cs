@@ -4,6 +4,7 @@
     {
         public static PrimeNumberFinder pnf;
         
+        
         public static void Main(string[] args)
         {
             pnf(1);

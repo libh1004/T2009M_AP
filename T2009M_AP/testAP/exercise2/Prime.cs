@@ -22,6 +22,7 @@ namespace T2009M_AP.testAP.exercise2
             return true;
         }
 
+        
         public int PrintResult(int n)
         {
             return n;
