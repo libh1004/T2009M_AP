@@ -4,7 +4,7 @@ using System.Threading;
 namespace T2009M_AP.lab_5
 {
     
-    
+    /*
     public class Program
     {
         public static void Main(string[] args)
@@ -13,5 +13,5 @@ namespace T2009M_AP.lab_5
             Thread t1 = new Thread(st.CalculateTime);
             t1.Start();
         }
-    }
+    }*/
 }
